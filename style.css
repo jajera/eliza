@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'VT323';
+    src: url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'VT323', monospace;
+}
+
+.terminal {
+    width: 800px;
+    height: 600px;
+    background-color: #000;
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: #1a1a1a;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.terminal-title {
+    color: #0f0;
+    font-size: 14px;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.terminal-body {
+    padding: 20px;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+    color: #0f0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+#chat-container {
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 10px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prompt {
+    color: #0f0;
+}
+
+#user-input {
+    background: transparent;
+    border: none;
+    color: #0f0;
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    width: 100%;
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0f0;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0c0;
+}
